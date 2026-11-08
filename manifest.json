@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Stremio Volume Keeper",
+  "version": "1.0",
+  "description": "Impede que o volume volte a 100% ao mudar de episódio no Stremio Web.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://web.stremio.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://web.stremio.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
